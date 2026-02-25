@@ -18,7 +18,7 @@ useEffect(() => {
 
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/recipie-finder">
       <NavBar />
       <main className="max-w-7xl mx-auto p-6">
         <Routes>
