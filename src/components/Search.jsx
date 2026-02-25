@@ -47,7 +47,7 @@ export default function Search({favorites, setFavorites}) {
         <div className="flex flex-col md:flex-row gap-3 p-2 rounded-2xl bg-(--card) border border-white/5 shadow-xl">
           <div className="flex-1 flex items-center px-4">
 
-            <i class="fa-solid fa-magnifying-glass"></i>
+            <i className="fa-solid fa-magnifying-glass"></i>
 
             <input type="text" placeholder="e.g. Garlic, Spinach, Pasta..." className="w-full bg-transparent px-4 py-3 text-(--text) placeholder-(--muted)/40 focus:outline-none"
               //Getting users query here 
