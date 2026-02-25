@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState } from 'react';
 import { useEffect } from "react"
-import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate, HashRouter } from "react-router-dom";
 import NavBar from "./components/NavBar";
 import Search from './components/Search';
 import Favorites from './components/Favorites';
@@ -18,7 +18,7 @@ useEffect(() => {
 
 
   return (
-    <BrowserRouter basename="/recipie-finder">
+    <HashRouter>
       <NavBar />
       <main className="max-w-7xl mx-auto p-6">
         <Routes>
@@ -27,7 +27,7 @@ useEffect(() => {
           <Route path="/favorites" element={<Favorites favorites={favorites} setFavorites={setFavorites}/>} />
         </Routes>
       </main>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
