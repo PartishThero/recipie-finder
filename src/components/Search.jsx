@@ -91,23 +91,13 @@ export default function Search({favorites, setFavorites}) {
               <div className='relative'>
                 <button className='absolute top-2.5 right-2.5 bg-(--accent) text-(--bg) px-3.5 py-1.5 rounded-lg hover:cursor-pointer'
                         onClick={() => setExpanded(expanded === recipe.idMeal ? null : recipe.idMeal)}>
-                  {expanded === recipe.idMeal ? <i className="fa-solid fa-angle-up"></i> : <i className="fa-solid fa-angle-down"></i>}
+                  {expanded === recipe.idMeal ? <i class="fa-solid fa-up-long"></i> : <i class="fa-solid fa-down-long"></i>}
                 </button>
 
                 <img src={recipe.strMealThumb} className="w-full h-48 object-cover rounded-lg mb-3"/>
-              </div>
 
 
-              <div className='relative'>
-                <h2 className="text-lg font-semibold">{recipe.strMeal}
-                  {expanded === recipe.idMeal && (
-                    <div className="mt-3 p-3 bg-(--bg) rounded-lg transition-all duration-300">
-                      <p className="text-sm">{recipe.strInstructions}</p>
-                    </div>
-                  )}
-                </h2>
-
-                <button className='absolute top-2.5 right-1.5 mx-0.5 -my-2.5 text-lg text-(--accent) hover:cursor-pointer'
+                <button className='absolute top-5.25 right-15.5 mx-0.5 -my-2.5 text-(--bg) hover:cursor-pointer bg-(--accent) px-3.5 py-1.5 rounded-lg'
                         onClick={(e) => {e.stopPropagation() //to stop from reloading
                           if (isFavorite){
                             setFavorites(favorites.filter(
@@ -120,6 +110,18 @@ export default function Search({favorites, setFavorites}) {
 
                     {isFavorite ? <i className="fa-solid fa-heart"></i> : <i className="fa-regular fa-heart"></i>}
                 </button>
+              </div>
+
+
+              <div className='relative'>
+                <h2 className="text-lg font-semibold">{recipe.strMeal}
+                  {expanded === recipe.idMeal && (
+                    <div className="mt-3 p-3 bg-(--bg) rounded-lg transition-all duration-300">
+                      <p className="text-sm">{recipe.strInstructions}</p>
+                    </div>
+                  )}
+                </h2>
+
 
               </div>
 
