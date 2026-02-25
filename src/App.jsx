@@ -22,6 +22,7 @@ useEffect(() => {
       <NavBar />
       <main className="max-w-7xl mx-auto p-6">
         <Routes>
+          <Route path="/" element={<Navigate to="/search" replace />} />
           <Route path="/search" element={<Search favorites={favorites} setFavorites={setFavorites}/>} />
           <Route path="/favorites" element={<Favorites favorites={favorites} setFavorites={setFavorites}/>} />
         </Routes>
