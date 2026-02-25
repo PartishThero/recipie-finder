@@ -24,7 +24,6 @@ export default function Favorites({ favorites, setFavorites }) {
 
           <h2 className="text-lg font-semibold text-(--text)"> Nothing saved yet </h2>
           <p className="text-(--muted) text-sm max-w-sm mx-auto">Save recipes you like so you can quickly find them later.</p>
-
           <Link to="/search" className="inline-block bg-(--accent) text-(--bg) px-6 py-2.5 rounded-lg text-sm font-semibold hover:brightness-110 transition-all"> Browse recipes </Link>
 
 
